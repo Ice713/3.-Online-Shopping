@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,19 @@ namespace _3.Online_Shopping
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void buttonDisplayDetails_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ElectronicProduct product = new ElectronicProduct(textBoxName.Text, numericUpDownPrice.Value, Convert.ToInt32(numericUpDownWarranty.Value));
+                MessageBox.Show(product.GetDetails(), "Product Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

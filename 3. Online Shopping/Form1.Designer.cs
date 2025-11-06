@@ -119,6 +119,7 @@
             this.buttonDisplayDetails.TabIndex = 8;
             this.buttonDisplayDetails.Text = "Display Product Details";
             this.buttonDisplayDetails.UseVisualStyleBackColor = true;
+            this.buttonDisplayDetails.Click += new System.EventHandler(this.buttonDisplayDetails_Click);
             // 
             // Form1
             // 

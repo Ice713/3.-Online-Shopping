@@ -19,7 +19,7 @@ namespace _3.Online_Shopping
 
         public virtual string GetDetails()
         {
-            return $"Product: {Name}\n$Price: {Price}";
+            return $"Product: {Name}\nPrice: {Price.ToString("C2")}";
         }
     }
 }
